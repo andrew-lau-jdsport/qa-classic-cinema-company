@@ -29,10 +29,10 @@ function App() {
         <Header />
         <div>
           <Routes>
-            <Route exact path="/" element={<Banner name = "home" />, <Home />}/>
-            <Route path="/whatIsOn" element={<Banner name = "whatIsOn" />, <WhatIsOn />}/>
-            <Route path="/signUp" element={<Banner name = "signUp" />, <SignUp />}/>
-            <Route path="/comingSoon" element={<Banner name = "comingSoon" />, <ComingSoon />}/>
+            <Route exact path="/" element={[<Banner name = "home" />, <Home />]}/>
+            <Route path="/whatIsOn" element={[<Banner name = "whatIsOn" />, <WhatIsOn />]}/>
+            <Route path="/signUp" element={[<Banner name = "signUp" />, <SignUp />]}/>
+            <Route path="/comingSoon" element={[<Banner name = "comingSoon" />, <ComingSoon />]}/>
             <Route path="*" element={<NotFound />}/>
           </Routes>
         </div>
