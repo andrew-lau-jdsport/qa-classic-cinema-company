@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 const Film = () => {
     const { id } = useParams();

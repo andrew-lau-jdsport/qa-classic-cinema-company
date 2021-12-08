@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import AllBookings from "./AllBookings";
-import FilmModel from './utils/Film.model.jsx';
 import axios from 'axios';
 import Modal from './utils/Modal';
 

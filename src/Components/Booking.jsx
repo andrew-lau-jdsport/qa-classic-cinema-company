@@ -23,7 +23,7 @@ const Booking = ({film}) => {
 };
 
 Booking.propTypes = {
-    schedule: PropTypes.instanceOf(FilmModel)
+    film: PropTypes.instanceOf(FilmModel)
 }
 
 

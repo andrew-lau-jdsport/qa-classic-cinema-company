@@ -24,9 +24,7 @@ const AllBookings = ({films}) => {
             <h3>Bookings</h3>
             <table>
                 <tbody>
-                    <tr>Start Bookings</tr>
                     {populateTable()}
-                    <tr>End Bookings</tr>
                 </tbody>
             </table>
         </div>
