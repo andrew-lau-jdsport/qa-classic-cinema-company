@@ -6,19 +6,16 @@ const AllBookings = ({films}) => {
     const populateTable = () => {
         if (films?.length > 0) {
             return films.map(currentFilm => {
-                const { img, title, pg, description, times, _id } = currentFilm;
-                const film = new FilmModel(img, title, pg, description, times, _id);
-                return 
-                    <td>
-                        <p>film</p>
-                        <Booking film={film} key={film._id} />
-                    </td>
-                    ;
+                const {_id, title, synopsis, cast, directors, showingTimes, releaseDate, filmStatus, img} = currentFilm;
+                const film = new FilmModel(_id, title, synopsis, cast, directors, showingTimes, releaseDate, filmStatus, img);
+                return <Booking film={film} />;
             });
         }
 
         return (
-            <></>
+            <tr>
+                <td>No Films Showing</td>
+            </tr>
         );
     }
 
@@ -27,7 +24,9 @@ const AllBookings = ({films}) => {
             <h3>Bookings</h3>
             <table>
                 <tbody>
+                    <tr>Start Bookings</tr>
                     {populateTable()}
+                    <tr>End Bookings</tr>
                 </tbody>
             </table>
         </div>
