@@ -13,6 +13,7 @@ import Modal from './Components/utils/Modal.jsx';
 import NotFound from './Components/utils/NotFound.jsx';
 import SignUp from './Components/SignUp';
 import Home from './Components/Home';
+import Film from './Components/Film';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
             <Route path="/whatIsOn" element={[<Banner name = "whatIsOn" />, <WhatIsOn />]}/>
             <Route path="/signUp" element={[<Banner name = "signUp" />, <SignUp />]}/>
             <Route path="/comingSoon" element={[<Banner name = "comingSoon" />, <ComingSoon />]}/>
+            <Route path="/book/:id" element={<Film/>} />
             <Route path="*" element={<NotFound />}/>
           </Routes>
         </div>

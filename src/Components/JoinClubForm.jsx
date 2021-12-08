@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import PersonalModel from "./utils/Personal.model";
 
-const JoinClubForm = (submiteAction, personal) => {
+const JoinClubForm = (submitAction, personal) => {
     const [title, setTitle] = useState(``);
     const [firstName, setFirstName] = useState(``);
     const [lastName, setLastName] = useState(``);
