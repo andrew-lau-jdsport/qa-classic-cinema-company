@@ -1,18 +1,18 @@
 import react from "react";
 import { Link, NavLink } from 'react-router-dom';
 
-import logo from "../images/logo.svg";
+import logo from "../images/qa.jpeg";
 
 const Header = () => {
     return (
-        <div>
-            <nav>
+        <nav className="navbar navbar-expand md navbar-light">
+            <div className="navbar navbar-expand md navbar-light">
                 <NavLink to="/">
                     <img src={logo} alt="CCC" />
                 </NavLink>
-                <div>
-                    <ul>
-                        <li>
+                <div className="collapse navbar-collapse" id="navBarNav">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
                             <NavLink to="/whatIsOn">
                                 What's On
                             </NavLink>
@@ -39,8 +39,8 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     );
 };
 
