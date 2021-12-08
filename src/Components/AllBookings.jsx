@@ -1,17 +1,17 @@
 import React from "react";
 import Booking from './Booking.jsx';
-import ScheduleModel from './utils/Schedule.model.jsx';
+import FilmModel from './utils/Film.model.jsx';
 
-const AllBookings = ({schedules}) => {
+const AllBookings = ({films}) => {
     const populateTable = () => {
-        if (schedules?.length > 0) {
-            return schedules.map(currentSchedule => {
-                const { img, title, pg, description, times, _id } = currentSchedule;
-                const schedule = new ScheduleModel(img, title, pg, description, times, _id);
+        if (films?.length > 0) {
+            return films.map(currentFilm => {
+                const { img, title, pg, description, times, _id } = currentFilm;
+                const film = new FilmModel(img, title, pg, description, times, _id);
                 return 
                     <td>
-                        <p>Schedule</p>
-                        <Booking schedule={schedule} key={schedule._id} />
+                        <p>film</p>
+                        <Booking film={film} key={film._id} />
                     </td>
                     ;
             });

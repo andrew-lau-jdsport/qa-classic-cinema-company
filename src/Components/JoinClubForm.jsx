@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
-import ScheduleModel from "./utils/Schedule.model";
+import PersonalModel from "./utils/Personal.model";
 
 const JoinClubForm = (submiteAction, personal) => {
     const [title, setTitle] = useState(``);
@@ -100,7 +100,7 @@ const JoinClubForm = (submiteAction, personal) => {
 
 JoinClubForm.propTypes = {
     submitAction: PropTypes.func.isRequired,
-    personal: PropTypes.instanceOf(ScheduleModel)
+    personal: PropTypes.instanceOf(PersonalModel)
 }
 
 export default JoinClubForm;
