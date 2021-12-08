@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import AllBookings from "./AllBookings";
 import FilmModel from './utils/Film.model.jsx';
 import axios from 'axios';
+import Modal from './utils/Modal';
 
 const MOCKDATAURL = 'http://localhost:4000/allFilms';
 
@@ -46,19 +47,22 @@ const WhatIsOn = () => {
     const getFilms = async () => {
         try {
           const res = await axios.get(MOCKDATAURL);
-          return res? ({res}) : ({ error: `There are no films stored` });
+          return res.data.length? ({data: res.data}) : ({ error: `There are no films stored` });
         }
         catch (e) {
             setGetError(`Data not available from server: ${e.message}`)
             return ({ error: `Data not available from server: ${e.message}` });
         }
-      };
+    };
     
     return (
-        <div>
-        <p> This is All Bookings</p>
-            <AllBookings films = {films}/>
-        </div>
+        <>
+            {getError && <Modal handleClose={() => setGetError(``)} message={getError} />}
+            <div>
+            <p> This is All Bookings</p>
+                <AllBookings films = {films.data}/>
+            </div>
+        </>
     );
 };
 
