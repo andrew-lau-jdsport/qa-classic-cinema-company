@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 const Banner = ({name}) => {
     return (
-        <>
-            <p>{name}</p>
-            <img src='' alt="what's on"/>
-        </>
+        <div>
+            <p>Banner: {name}</p>
+            <img src='' alt="Banner"/>
+        </div>
     );
 };
 

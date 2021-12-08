@@ -25,13 +25,9 @@ const AllBookings = ({schedules}) => {
         <div className="row">
             <h3>Bookings</h3>
             <table>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>{populateTable()}</tbody>
+                <tbody>
+                    {populateTable()}
+                </tbody>
             </table>
         </div>
     );

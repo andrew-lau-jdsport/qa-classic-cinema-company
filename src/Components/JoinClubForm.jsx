@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from 'prop-types';
+import ScheduleModel from "./utils/Schedule.model";
 
 const JoinClubForm = (submiteAction, personal) => {
     const [title, setTitle] = useState(``);
@@ -12,7 +13,7 @@ const JoinClubForm = (submiteAction, personal) => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        submitAction(title, firstName, lastName, email, phone, dateOfBirth, gender);
+        // submitAction(title, firstName, lastName, email, phone, dateOfBirth, gender);
         setTitle(``);
         setFirstName(``);
         setLastName(``);
@@ -38,7 +39,7 @@ const JoinClubForm = (submiteAction, personal) => {
             <input
                 type="text"
                 name="firstName"
-                value={firstMame}
+                value={firstName}
                 onChange={event => setFirstName(event.target.value)}
             />
             <input

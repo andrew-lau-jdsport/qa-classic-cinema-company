@@ -1,8 +1,12 @@
 import React from "react";
+import JoinClubForm from "./JoinClubForm";
 
 const SignUp = () => {
     return (
-        <p> This is SignUp</p>
+        <div>
+            <p> This is SignUp</p>
+            <JoinClubForm/>
+        </div>
     );
 };
 
