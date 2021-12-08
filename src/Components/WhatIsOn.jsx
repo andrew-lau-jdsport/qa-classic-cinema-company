@@ -47,7 +47,7 @@ const WhatIsOn = () => {
     const getFilms = async () => {
         try {
           const res = await axios.get(MOCKDATAURL);
-          return res.data.length? ({data: res.data}) : ({ error: `There are no films stored` });
+          return res.data.length? ({data:res.data}) : ({ error: `There are no films stored` });
         }
         catch (e) {
             setGetError(`Data not available from server: ${e.message}`)
@@ -60,7 +60,7 @@ const WhatIsOn = () => {
             {getError && <Modal handleClose={() => setGetError(``)} message={getError} />}
             <div>
             <p> This is All Bookings</p>
-                <AllBookings films = {films.data}/>
+                <AllBookings films = {films.data} />
             </div>
         </>
     );

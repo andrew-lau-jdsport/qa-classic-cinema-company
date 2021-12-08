@@ -1,9 +1,12 @@
 import React from "react";
+import { useHistory, useParams } from 'react-router-dom'
 
-const Film = ({id}) => {
+const Film = () => {
+    const { id } = useParams();
+    
     return (
         <div>
-            Dynamic Linking to book {id}
+            <p>Book on {id}</p>
         </div>
     );
 };

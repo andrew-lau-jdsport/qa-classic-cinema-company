@@ -16,7 +16,6 @@ import Home from './Components/Home';
 import Film from './Components/Film';
 
 function App() {
-
   const [getError, setGetError] = useState(``);
   const [postError, setPostError] = useState(``);
   const [putError, setPutError] = useState(``);
@@ -34,7 +33,7 @@ function App() {
             <Route path="/whatIsOn" element={[<Banner name = "whatIsOn" />, <WhatIsOn />]}/>
             <Route path="/signUp" element={[<Banner name = "signUp" />, <SignUp />]}/>
             <Route path="/comingSoon" element={[<Banner name = "comingSoon" />, <ComingSoon />]}/>
-            <Route path="/book/:id" element={<Film/>} />
+            <Route path="/book/:id" element={<Film />} />
             <Route path="*" element={<NotFound />}/>
           </Routes>
         </div>
