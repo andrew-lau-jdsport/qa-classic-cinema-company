@@ -76,7 +76,6 @@ const JoinClubForm = (submiteAction, personal) => {
                 onChange={event => setDateOfBirth(event.target.value)}
             />
         </div>
-        // title, firstName, lastName, email, phone, dateOfBirth, gender,
         <div>
             <label>Gender</label>
             <input
