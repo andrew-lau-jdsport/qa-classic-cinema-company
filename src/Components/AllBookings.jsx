@@ -10,6 +10,7 @@ const AllBookings = ({schedules}) => {
                 const schedule = new ScheduleModel(img, title, pg, description, times, _id);
                 return 
                     <td>
+                        <p>Schedule</p>
                         <Booking schedule={schedule} key={schedule._id} />
                     </td>
                     ;
